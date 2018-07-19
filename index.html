@@ -25,6 +25,67 @@
     .nav-tabs{
       margin-bottom: 0;
     }
+
+    @fab-color: #03A9F4;
+    @fab-size: 64px;
+    @fab-margin: 1 / 4 * 3 * @fab-size;
+    @fab-child-size: 1 / 3 * 2 * @fab-size;
+    @fab-child-margin: (@fab-size - @fab-child-size) / 2 + @fab-margin;
+
+    .fab{
+    	background: @fab-color;
+    	width: @fab-size;
+    	height: @fab-size;
+    	border-radius: 50%;
+    	text-align:center;
+    	color: #FFF;
+    	box-shadow:0px 0px 3px rgba(0,0,0,0.5),3px 3px 3px rgba(0,0,0,0.25);
+    	position: fixed;
+    	bottom: @fab-margin;
+    	right: @fab-margin;
+    	font-size: 2.6667em;
+    	display: inline-block;
+    	cursor: default;
+    }
+
+    .fab span{
+    	vertical-align:middle;
+    }
+
+    .fab.child{
+    	right: @fab-child-margin;
+    	width: @fab-child-size;
+    	height: @fab-child-size;
+    	display: none;
+    	opacity: 0;
+    	font-size: 2em;
+    }
+
+    .black() when (lightness(@fab-color) > 50%){
+    	.fab{
+    		color: #000;
+    	}
+    }
+
+    .black();
+
+    .backdrop{
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    	background: #ECECEC;
+    	opacity: 0.9;
+    	display: none;
+    }
+
+    body{
+    	background: #363F45;
+    	font-family: 'Roboto', sans-serif;
+    	text-align: center;
+    	color: #FFF;
+    }
     </style>
   </head>
 
@@ -85,9 +146,44 @@
 
 
 
+    <div class="backdrop"></div>
+    <div class="fab child" data-subitem="1"><span>C</span></div>
+    <div class="fab child" data-subitem="2"><span>B</span></div>
+    <div class="fab child" data-subitem="3"><span>A</span></div>
+    <div class="fab" id="masterfab"><span>+</span></div>
+    <h1>Floating Action Button</h1>
+    <p>(Hint: Button interacts with you)</p>
 
     <script src="https://ajax/googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+      $(".fab,.backdrop").click(function(){
+        if($(".backdrop").is(":visible")){
+          $(".backdrop").fadeOut(125);
+          $(".fab.child")
+            .stop()
+            .animate({
+              bottom	: $("#masterfab").css("bottom"),
+              opacity	: 0
+            },125,function(){
+              $(this).hide();
+            });
+        }else{
+          $(".backdrop").fadeIn(125);
+          $(".fab.child").each(function(){
+            $(this)
+              .stop()
+              .show()
+              .animate({
+                bottom	: (parseInt($("#masterfab").css("bottom")) + parseInt($("#masterfab").outerHeight()) + 70 * $(this).data("subitem") - $(".fab.child").outerHeight()) + "px",
+                opacity	: 1
+              },125);
+            });
+          }
+        });
+      });
+    </script>
   </body>
 
 </html>
