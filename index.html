@@ -125,8 +125,12 @@
       var elems = document.querySelectorAll('.fixed-action-btn');
       var instances = M.FloatingActionButton.init(elems, {
         direction: 'top',
-        hoverEnabled: false
+        hoverEnabled: true
       });
+      var instance = M.FloatingActionButton.getInstance(elem);
+      instance.open();
+      instance.close();
+      instance.destroy();
     });
     </script>
 
