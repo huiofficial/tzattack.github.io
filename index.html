@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh">
   <head>
+    <title>仲耀晖 主页</title>
+
+    <meta charset='UTF-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>仲耀晖 主页</title>
     <link rel="icon" href="favicon.png">
-    <script src='//static.codepen.io/assets/editor/live/console_runner-ce3034e6bde3912cc25f83cccb7caa2b0f976196f2f2d52303a462c826d54a73.js'></script>
-    <script src='//static.codepen.io/assets/editor/live/css_live_reload_init-890dc39bb89183d4642d58b1ae5376a0193342f9aed88ea04330dc14c8d52f55.js'></script>
-    <meta charset='UTF-8'>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel='stylesheet prefetch' href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
-    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400italic,700italic,700,400'>
-    <style>
+
+    <style id="base">
       .jumbotron{
         background-color: #2E2D88;
         color:white;
@@ -27,77 +25,45 @@
       .nav-tabs{
         margin-bottom: 0;
       }
-
-      .fab {
-        background: #03A9F4;
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        text-align: center;
-        color: #FFF;
-        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.25);
-        position: fixed;
-        bottom: 48px;
-        right: 48px;
-        font-size: 2.6667em;
-        display: inline-block;
-        cursor: default;
-      }
-      .fab span {
-        vertical-align: middle;
-      }
-      .fab.child {
-        right: 58.66666667px;
-        width: 42.66666667px;
-        height: 42.66666667px;
-        display: none;
-        opacity: 0;
-        font-size: 2em;
-      }
-      .backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #ECECEC;
-        opacity: 0.9;
-        display: none;
-      }
     </style>
+
   </head>
 
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
-      </div>
-    </nav>
-
     <div class="container">
       <div class="page-header">
         <h1>仲耀晖的网站</h1>
       </div>
 
 
-        <div class="jumbotron">
-          <p>我是仲耀晖，欢迎来到我的网站！</p>
-          <p>
-            <a href="#" class="btn btn-default btn-lg" role="button">More Info</a>
-            <button type="submit" class="btn btn-danger" role="button">
-              Button
-            </button>
-          </p>
+      <div class="jumbotron">
+        <p>我是仲耀晖，欢迎来到我的网站！</p>
+        <p>
+          <a href="#" class="btn btn-default btn-lg" role="button">More Info</a>
+          <button type="submit" class="btn btn-danger" role="button">
+            Button
+          </button>
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <h4>About Me</h4>
+          it's been 2 years since I am here and try to deliver a championship
+          to the njucs. i give everything that i had. i put my heart my blood
+          my sweat my tears in this game, man. against all odds, i don't know
+          why I wanna take the hardest road, I don't know why the man above
+          give the hardest road, but there is nothing to bet the man above don't
+          put you into the position that you cannot control. And I just keep the
+          same positive attitude like, instead of saying why me, I say this is
+          what him want me to do.
         </div>
 
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <h4>About Me</h4>
+        <div class="clearfix visible-xs"></div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <h4><a href="#col1Content" data-toggle="collapse">About Me 2</a></h4>
+          <div id="col1Content" class="collapse in">
             it's been 2 years since I am here and try to deliver a championship
             to the njucs. i give everything that i had. i put my heart my blood
             my sweat my tears in this game, man. against all odds, i don't know
@@ -108,23 +74,8 @@
             what him want me to do.
           </div>
 
-          <div class="clearfix visible-xs"></div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <h4><a href="#col1Content" data-toggle="collapse">About Me 2</a></h4>
-            <div id="col1Content" class="collapse in">
-              it's been 2 years since I am here and try to deliver a championship
-              to the njucs. i give everything that i had. i put my heart my blood
-              my sweat my tears in this game, man. against all odds, i don't know
-              why I wanna take the hardest road, I don't know why the man above
-              give the hardest road, but there is nothing to bet the man above don't
-              put you into the position that you cannot control. And I just keep the
-              same positive attitude like, instead of saying why me, I say this is
-              what him want me to do.
-            </div>
-
-          </div>
         </div>
+      </div>
 
 
 
@@ -134,50 +85,12 @@
 
 
 
-
-
-
-      <div class="backdrop"></div>
-      <div class="fab child" data-subitem="1"><span>C</span></div>
-      <div class="fab child" data-subitem="2"><span>B</span></div>
-      <div class="fab child" data-subitem="3"><span>A</span></div>
-      <div class="fab" id="masterfab"><span>+</span></div>
-
     </div>
 
 
     <script src="https://ajax/googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script >$(function(){
-    	$(".fab,.backdrop").click(function(){
-    		if($(".backdrop").is(":visible")){
-    			$(".backdrop").fadeOut(125);
-    			$(".fab.child")
-    				.stop()
-    				.animate({
-    					bottom	: $("#masterfab").css("bottom"),
-    					opacity	: 0
-    				},125,function(){
-    					$(this).hide();
-    				});
-    		}else{
-    			$(".backdrop").fadeIn(125);
-    			$(".fab.child").each(function(){
-    				$(this)
-    					.stop()
-    					.show()
-    					.animate({
-    						bottom	: (parseInt($("#masterfab").css("bottom")) + parseInt($("#masterfab").outerHeight()) + 70 * $(this).data("subitem") - $(".fab.child").outerHeight()) + "px",
-    						opacity	: 1
-    					},125);
-    			});
-    		}
-    	});
-    });
-    //# sourceURL=pen.js
-    </script>
+
   </body>
 
 </html>
