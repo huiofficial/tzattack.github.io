@@ -121,9 +121,12 @@
       </ul>
     </div>
     <script id="fab">
-    $(document).ready(function(){
-      $('.fixed-action-btn').floatingActionButton();
-    });
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.fixed-action-btn');
+        var instances = M.FloatingActionButton.init(elems, {
+          direction: 'left'
+        });
+      });
     </script>
 
     <script src="https://ajax/googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
