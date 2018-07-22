@@ -13,12 +13,15 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <!-- Compiled and minified JavaScript -->
-  <link rel="canonical" href="https://themes.materializecss.com/pages/demo">
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="仲耀晖的主页">
+  <meta property="og:description" content="仲耀晖的个人网站">
+  <meta property="og:image" content="./resources/thumbnail.jpeg">
+  <meta property="og:url" content="http://tzattack.github.io/">
 
 </head>
 
@@ -40,7 +43,7 @@
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
-          <li><img src="./resources/donate.jpeg" width="100%"/></li>
+          <li><img src="./resources/donate.jpeg" width="100%" /></li>
           <li><a href="./catogeries.html">ALL</a></li>
           <li><a href="./vlog/index.html">Vlog</a></li>
           <li><a href="./tensorflow/index.html">TensorFlow</a></li>
@@ -56,15 +59,27 @@
 
   <div class="container">
 
+    <div>
+      <h1>Newest Feed</h1>
+    </div>
+
     <div class="row">
-      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <h4>About This Website</h4> IT'S MY OWN WEBSITE FOR CONTENT SHARING. MY GOAL IS TO SHARE QURALITY CONTENT WITH THE WHOLE WORLD. IF YOU LIKE MY CONTENT AND WANT TO HELP ME TO GO FURTHER, YOU CAN ALWAYS SCAN THE ALIPAY OR THE WECHAT PAY QR CODE DOWN BELOW. AFTER DOING THAT,
-        YOU CAN EMAIL ME TZATTACK@GMAIL.COM TO GET MY PERSONAL WECHAT ACCOUNT FOR FURTHER CONTACT. I HOPE I CAN BRING YOU THE BEST OF ME AND MAKE IT A BETTER WORLD. THANK YOU FOR YOUR VISITING.
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="card">
+          <div class="card-image">
+            <img src="./resources/donate.jpeg">
+            <span class="card-title">无锡之行 #Vlog</span>
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">jump</i></a>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+          </div>
+        </div>
       </div>
 
       <div class="clearfix visible-xs"></div>
 
-      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
         <h4><a href="#col1Content" data-toggle="collapse">About Me</a></h4>
         <div id="col1Content" class="collapse in">
           it's been 2 years since I am here and try to deliver a championship to the njucs. i give everything that i had. i put my heart my blood my sweat my tears in this game, man. against all odds, i don't know why I wanna take the hardest road, I don't know
@@ -78,7 +93,6 @@
 
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <img src="./readme/WechatIMG218.jpeg" alt="支付宝/微信 打赏" width="100%" />
     </div>
 
 
@@ -134,12 +148,7 @@
       var elems = document.querySelectorAll('.fixed-action-btn');
       var instances = M.FloatingActionButton.init(elems, {
         direction: 'top',
-        hoverEnabled: true
       });
-      var instance = M.FloatingActionButton.getInstance(elem);
-      instance.open();
-      instance.close();
-      instance.destroy();
     });
   </script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
